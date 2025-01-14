@@ -1,0 +1,70 @@
+@import url("../fonts/font.css");
+
+:root {
+  /* colors */
+  --color-dark: #000000;
+  --color-gray: #4C4C4C;
+  --color-light: #FFFFFF;
+
+  /* fonts */
+  --font-primary: 'Raleway', sans-serif;
+}
+
+* {
+  font-family: var(--font-primary);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.bg-video {
+  position: fixed;
+  width: 100%;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page__title {
+  position: relative;
+  font-size: 116px;
+  font-weight: bold;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  max-width: min-content;
+  margin: 50px auto auto;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page__title:hover {
+  color: var(--color-gray);
+}
+
+.page__title::before {
+  content: 'На самом деле нет.\AВажнее&mdash;научиться ошибаться.';
+  display: none;
+  min-width: fit-content;
+  padding: 36px 44px;
+  border: 2px solid var(--color-dark);
+  border-radius: 20px;
+  box-shadow: 0px 10px 1px var(--color-dark);
+  background-color: var(--color-light);
+  font-size: 35px;
+  font-weight: normal;
+  text-transform: none;
+  text-align: left;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  pointer-events: none;
+}
+
+.page__title:hover:before {
+  display: block;
+}
