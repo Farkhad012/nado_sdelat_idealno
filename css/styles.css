@@ -23,7 +23,7 @@
 }
 
 body {
-  background: #feafe8;
+  background: var(--color-bg);
 }
 
 .page {
