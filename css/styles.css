@@ -76,6 +76,10 @@ body {
   pointer-events: none;
 }
 
+.page__title::after {
+  content: '*';
+}
+
 .page__title:hover:before {
   display: block;
 }
